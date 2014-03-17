@@ -1,0 +1,41 @@
+matrice document/mot
+nombre d'appartition d'un mot dans un document
+
+
+Nettoie le fichier html
+cat front_page01_01_03_ind.htm | tr [A-Z] [a-z] | tr "\n" " " | tr "\r" " " | sed s/"<script.*<\/script>"/" "/g | sed s/"<[^>]*>"/" "/g | sed "s/[ \t][ \t]*/\ /g"
+
+Compte les mots
+cat front_page01_02_04_hch.htm | tr [A-Z] [a-z] | tr "\n" " " | tr "\r" " " | sed s/"<script.*<\/script>"/" "/g | sed s/"<[^>]*>"/" "/g | sed "s/[ \t][ \t]*/\ /g" | wc -w
+
+
+Moyenne du nombre de mot par fichier/dossier
+gaurin@info23-03:~/AideDesi/projet/projet_Data$ ./bash.bash accueil/
+36718
+moyenne=356
+gaurin@info23-03:~/AideDesi/projet/projet_Data$ ./bash.bash blog/
+200193
+moyenne=1924
+gaurin@info23-03:~/AideDesi/projet/projet_Data$ ./bash.bash commerce/
+33420
+moyenne=341
+gaurin@info23-03:~/AideDesi/projet/projet_Data$ ./bash.bash FAQ/
+127926
+moyenne=1332
+gaurin@info23-03:~/AideDesi/projet/projet_Data$ ./bash.bash home
+31927
+moyenne=313
+gaurin@info23-03:~/AideDesi/projet/projet_Data$ ./bash.bash liste
+106723
+moyenne=1078
+gaurin@info23-03:~/AideDesi/projet/projet_Data$ ./bash.bash recherche/
+23005
+moyenne=223
+
+
+Pas de menu dans les blogs contrairement au FAQ
+Beaucoup de liens dans les listes
+
+Plus proche voisin
+
+utiliser la librairie
